@@ -15,14 +15,14 @@
 
 # Create a model of the schema
     folder: model/user.js
-	import connection file
-	In this file write a perticular methods for the operations
-	e.g. 
-	let user = {}
-	
-	user.userLogin = async (username, password) => {
-		-------*----*-------
-	}
+    import connection file
+    In this file write a perticular methods for the operations
+    e.g. 
+    let user = {}
+    
+    user.userLogin = async (username, password) => {
+        -------*----*-------
+    }
 ```
 
 ### Step 3 ###
@@ -31,16 +31,16 @@
 
 # Create a database setup
     folder: model/dbSetup.js
-	import connection file
-	define default user data
-	create a 'create.setupDB' method
-
-	e.g.
-	let create = {}
-	
-	create.setupDB = async () => {
-		-------*----*-------
-	}
+    import connection file
+    define default user data
+    create a 'create.setupDB' method
+    
+    e.g.
+    let create = {}
+    
+    create.setupDB = async () => {
+        -------*----*-------
+    }
 ```
 
 ### Step 4 ###
@@ -49,10 +49,10 @@
 
 # Create a service file
     folder: services/user.service.js
-	import model file
-	In this file write a services
-	e.g.
-	// user login service
+    import model file
+    In this file write a services
+    e.g.
+    // user login service
     user.userLogin = (username, password) => {
         return userModel.userLogin(username, password).then(res => {
             return res
@@ -66,14 +66,14 @@
 
 # Crate a route file
     folder: routes/route.js
-	import service file
-	e.g.
-	// login route
+    import service file
+    e.g.
+    // login route
     route.post('/login', (req, res, next) => {
-    let username = req.body.username
-    let password = req.body.password
-
-    return userService.userLogin(username, password).then(data => {
+        let username = req.body.username
+        let password = req.body.password
+        
+        return userService.userLogin(username, password).then(data => {
             res.json({data: data})
         }).catch(err => {
             next(err)
@@ -87,8 +87,8 @@
 
 # Crate a route file
     file: app.js
-	import bodyParser and all other required packages
-	e.g.
-	const express = require('express');
-	const app = express();
+    import bodyParser and all other required packages
+    e.g.
+    const express = require('express');
+    const app = express();
 ```
